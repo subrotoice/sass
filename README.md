@@ -71,6 +71,7 @@ nav {
 }
 ```
 ```
+// Compile CSS
 nav ul {
   margin: 0;
   padding: 0;
