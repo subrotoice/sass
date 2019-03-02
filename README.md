@@ -155,7 +155,7 @@ $desktop: 840px;
   }
 }
 ```
-Operators: Doing math in your CSS is very helpful with math operators like +, -, *, /, and %. 
+**Operators: Doing math in your CSS is very helpful with math operators like +, -, *, /, and %. **
 ```
 // SCSS
 .container {
