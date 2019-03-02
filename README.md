@@ -155,3 +155,35 @@ $desktop: 840px;
   }
 }
 ```
+Operators: Doing math in your CSS is very helpful with math operators like +, -, *, /, and %. 
+```
+// SCSS
+.container {
+  width: 100%;
+}
+
+article[role="main"] {
+  float: left;
+  width: 600px / 960px * 100%;
+}
+
+aside[role="complementary"] {
+  float: right;
+  width: 300px / 960px * 100%;
+}
+
+// CSS Output
+.container {
+  width: 100%;
+}
+
+article[role="main"] {
+  float: left;
+  width: 62.5%;
+}
+
+aside[role="complementary"] {
+  float: right;
+  width: 31.25%;
+}
+```
