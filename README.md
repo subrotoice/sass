@@ -120,3 +120,38 @@ body {
   background-color: #efefef;
 }
 ```
+
+**Mixins: Some thing like function. When same variable needs to use many times then it use.**
+```
+// SCSS
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+.box { @include transform(rotate(30deg)); }
+
+// CSS Output
+.box {
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+// Another SCSS
+$desktop: 840px;
+@mixin desktop {
+    @media (min-width: #{$desktop}){
+        @content;
+    }
+}
+
+// CSS Output
+@media (min-width: 840px) {
+  body #bg {
+    -webkit-clip-path: polygon(0 0, 66% 0, 37% 100%, 0% 100%);
+            clip-path: polygon(0 0, 66% 0, 37% 100%, 0% 100%);
+  }
+}
+```
