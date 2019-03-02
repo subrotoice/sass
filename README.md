@@ -40,11 +40,12 @@ $colors : (
     background-color: map-get($colors, accent); // background-color: #fff6bb; (css)
 }
 ```
-```// By Functions
+``` By Functions
 @function color($color-name){
     @return map-get($colors, $color-name);
 }
 
 #bg{
      background-color: color(primary);
-}```
+}
+```
