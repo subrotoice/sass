@@ -7,7 +7,9 @@ For background effect (https://bennettfeely.com/clippy)
 - You should always use SCSS, Because noraml css3 + Program CSS, For crating theme
 
 **Variables: to store colors, font stacks, or any CSS value you think you'll want to reuse. Sass uses the $ symbol.**
--- In SCSS
+
+- In SCSS
+```
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
 
@@ -15,13 +17,16 @@ body {
   font: 100% $font-stack;
   color: $primary-color;
 }
+```
 - In CSS
+```
 body {
   font: 100% Helvetica, sans-serif;
   color: #333;
 }
-
+```
 Other variable fetch
+```
 $colors : (
     primary: #005dff,
     primary-lite: lighten(#005dff, 40%),
@@ -32,3 +37,4 @@ $colors : (
 #bg {
     background-color: map-get($colors, accent); // background-color: #fff6bb; (css)
 }
+```
