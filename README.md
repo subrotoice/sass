@@ -6,7 +6,7 @@ For background effect (https://bennettfeely.com/clippy)
 - every valid CSS3 stylesheet is valid SCSS as well. (https://responsivedesign.is/articles/difference-between-sass-and-scss)
 - You should always use SCSS, Because noraml css3 + Program CSS, For crating theme
 
-**Variables: to store colors, font stacks, or any CSS value you think you'll want to reuse. Sass uses the $ symbol.
+**Variables: to store colors, font stacks, or any CSS value you think you'll want to reuse. Sass uses the $ symbol.**
 -- In SCSS
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
