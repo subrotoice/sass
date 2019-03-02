@@ -177,7 +177,7 @@ aside[role="complementary"] {
   width: 100%;
 }
 
-article[role="main"] {
+article[role="main"] { 
   float: left;
   width: 62.5%;
 }
