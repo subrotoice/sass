@@ -1,7 +1,7 @@
 ## SASS by Subroto
-Official Website (https://sass-lang.com/guide)--
+Official Website (https://sass-lang.com/guide)
 
-Sass in this Free Crash Course (https://www.youtube.com/watch?v=roywYSEPSvc)--
+Sass in this Free Crash Course (https://www.youtube.com/watch?v=roywYSEPSvc)
 
 For background effect (https://bennettfeely.com/clippy)
 - SASS just programm version of css which convert in to normall css. like main.scss compile to main.css and index.html page link with main.css not main.scss
