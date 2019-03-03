@@ -86,7 +86,7 @@ nav a {
   text-decoration: none;
 }
 ```
-**Import: like PHP include**
+**Import: like PHP include. It import scass file where mixins include script** 
 ```
 // reset.scss
 html,
@@ -154,8 +154,67 @@ $desktop: 840px;
             clip-path: polygon(0 0, 66% 0, 37% 100%, 0% 100%);
   }
 }
+
 ```
-**Operators: Doing math in your CSS is very helpful with math operators like +, -, *, /, and %. **
+**Mixin: is a way to buind some code with/without class name + CSS Property that will going repeatedly be used. Like PHP include, but only style not total file like import. Mixins are included by @include directive which takes Name  and Optionally arguments**
+
+```
+@mixin large-text {
+  font: {
+    family: Arial;
+    size: 20px;
+    weight: bold;
+  }
+  color: #ff0000;
+}
+
+.page-title {
+  @include large-text;
+  padding: 4px;
+  margin-top: 10px;}
+
+// CSS Output
+.page-title {
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff0000;
+  padding: 4px;
+  margin-top: 10px; }
+
+// Mixins may also be included outside of any rule
+@mixin silly-links {
+  a {
+    color: blue;
+    background-color: red;
+  }
+}
+
+// CSS Output
+a {
+  color: blue;
+  background-color: red; }
+
+// Arguments
+@mixin sexy-border($color, $width) {
+  border: {
+    color: $color;
+    width: $width;
+    style: dashed;
+  }
+}
+
+p { @include sexy-border(blue, 1in); }
+
+// CSS Output
+p {
+  border-color: blue;
+  border-width: 1in;
+  border-style: dashed; }
+
+
+@include silly-links;
+**Operators: Doing math in your CSS is very helpful with math operators. **
 ```
 // SCSS
 .container {
