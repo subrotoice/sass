@@ -156,7 +156,7 @@ $desktop: 840px;
 }
 
 ```
-**Mixin: is a way to buind some code with/without class name + CSS Property that will going repeatedly be used. Like PHP include, but only style not total file like import. Mixins are included by @include directive which takes Name  and Optionally arguments**
+**Mixin: is a way to buind some code with/without class name + CSS Property, that will going repeatedly be used. Like PHP include, but only style not total file like import. Mixins are included by @include directive which takes Name  and Optionally arguments**
 
 ```
 @mixin large-text {
@@ -189,6 +189,7 @@ $desktop: 840px;
     background-color: red;
   }
 }
+@include silly-links;
 
 // CSS Output
 a {
@@ -213,7 +214,57 @@ p {
   border-style: dashed; }
 
 
-@include silly-links;
+// We normally pass arguments, But it is possible to pass a block of styles to mixin as argument, Here receiving parameter is @content directive
+
+@mixin apply-to-ie6-only {
+  * html {
+    @content;
+  }
+}
+@include apply-to-ie6-only {
+  #logo {
+    background-image: url(/logo.gif);
+  }
+}
+
+// CSS Output
+* html #logo {
+  background-image: url(/logo.gif);
+}
+
+$color: white;
+@mixin colors($color: blue) {
+  background-color: $color;
+  @content;
+  border-color: $color;
+}
+.colors {
+  @include colors { color: $color; }
+}
+
+// CSS Output
+.colors {
+  background-color: blue;
+  color: white;
+  border-color: blue;
+}
+
+// Another Handy Maxin use for responsive design
+$desktop: 840px;
+@mixin desktop {
+    @media (min-width: #{$desktop}){
+        @content;
+    }
+}
+
+// CSS Output
+@media (min-width: 840px) {
+  body #bg {
+    -webkit-clip-path: polygon(0 0, 66% 0, 37% 100%, 0% 100%);
+            clip-path: polygon(0 0, 66% 0, 37% 100%, 0% 100%);
+  }
+}
+```
 **Operators: Doing math in your CSS is very helpful with math operators. **
 ```
 // SCSS
