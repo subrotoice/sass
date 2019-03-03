@@ -178,8 +178,8 @@ p {
   border-style: dashed; }
 
 
-// We normally pass arguments, But it is possible to pass a block of styles to mixin as argument, Here receiving parameter is @content directive
-
+// We normally pass arguments, But it is possible to pass a block of styles to mixin as argument, 
+//Here receiving parameter is @content directive
 @mixin apply-to-ie6-only { //Content/Block of code passing
   * html {
     @content;
