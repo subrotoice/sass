@@ -120,10 +120,10 @@ body {
   background-color: #efefef;
 }
 ```
-**Mixin: is a way to bind some code with/without class name + CSS Property, that will going repeatedly be used. Like PHP include, but only style not total file like import. Mixins are included by @include directive which takes Name  and Optionally arguments**
+**Mixin: is a way to bind some code (with/without class name + CSS Property) that will going repeatedly be used. Like PHP include, but only style not total file like import. Mixins are included by @include directive which takes Name  and Optionally arguments**
 
 ```
-@mixin large-text {  //Only properties
+@mixin large-text {  //Only properties - Without Class name
   font: {
     family: Arial;
     size: 20px;
