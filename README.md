@@ -120,46 +120,10 @@ body {
   background-color: #efefef;
 }
 ```
-
-**Mixins: Some thing like function. When same variable needs to use many times then it use.**
-```
-// SCSS
-@mixin transform($property) {
-  -webkit-transform: $property;
-  -ms-transform: $property;
-  transform: $property;
-}
-
-.box { @include transform(rotate(30deg)); }
-
-// CSS Output
-.box {
-  -webkit-transform: rotate(30deg);
-  -ms-transform: rotate(30deg);
-  transform: rotate(30deg);
-}
-
-// Another SCSS
-$desktop: 840px;
-@mixin desktop {
-    @media (min-width: #{$desktop}){
-        @content;
-    }
-}
-
-// CSS Output
-@media (min-width: 840px) {
-  body #bg {
-    -webkit-clip-path: polygon(0 0, 66% 0, 37% 100%, 0% 100%);
-            clip-path: polygon(0 0, 66% 0, 37% 100%, 0% 100%);
-  }
-}
+**Mixin: is a way to bind some code with/without class name + CSS Property, that will going repeatedly be used. Like PHP include, but only style not total file like import. Mixins are included by @include directive which takes Name  and Optionally arguments**
 
 ```
-**Mixin: is a way to buind some code with/without class name + CSS Property, that will going repeatedly be used. Like PHP include, but only style not total file like import. Mixins are included by @include directive which takes Name  and Optionally arguments**
-
-```
-@mixin large-text {
+@mixin large-text {  //Only properties
   font: {
     family: Arial;
     size: 20px;
@@ -183,7 +147,7 @@ $desktop: 840px;
   margin-top: 10px; }
 
 // Mixins may also be included outside of any rule
-@mixin silly-links {
+@mixin silly-links {  //Class name and Properties
   a {
     color: blue;
     background-color: red;
@@ -196,7 +160,7 @@ a {
   color: blue;
   background-color: red; }
 
-// Arguments
+// Arguments Passing
 @mixin sexy-border($color, $width) {
   border: {
     color: $color;
@@ -216,7 +180,7 @@ p {
 
 // We normally pass arguments, But it is possible to pass a block of styles to mixin as argument, Here receiving parameter is @content directive
 
-@mixin apply-to-ie6-only {
+@mixin apply-to-ie6-only { //Content/Block of code passing
   * html {
     @content;
   }
@@ -265,6 +229,7 @@ $desktop: 840px;
   }
 }
 ```
+
 **Operators: Doing math in your CSS is very helpful with math operators. **
 ```
 // SCSS
