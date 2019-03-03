@@ -10,7 +10,6 @@ For background effect (https://bennettfeely.com/clippy)
 
 **Variables: to store colors, font stacks, or any CSS value you think you'll want to reuse. Sass uses the $ symbol.**
 
-- In SCSS
 ```
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
@@ -19,9 +18,8 @@ body {
   font: 100% $font-stack;
   color: $primary-color;
 }
-```
-- In CSS
-```
+
+//Compiles to: CSS Output
 body {
   font: 100% Helvetica, sans-serif;
   color: #333;
@@ -53,7 +51,6 @@ $colors : (
 
 **Nesting: Very powerful tool in my perception**
 ```
-// SCSS
 nav {
   ul {
     margin: 0;
@@ -69,9 +66,8 @@ nav {
     text-decoration: none;
   }
 }
-```
-```
-// Compile CSS
+
+// CSS Output
 nav ul {
   margin: 0;
   padding: 0;
